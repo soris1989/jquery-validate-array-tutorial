@@ -1,0 +1,8 @@
+body {
+    font-family: sans-serif;
+}
+
+span.invalid {
+    display: block;
+    color: red;
+}
