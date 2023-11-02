@@ -35,9 +35,9 @@ $(document).ready(function () {
     });
 
     $.validator.addMethod("noDuplicates", function (value, element, param) {
-        console.log(element, value, this.currentForm, Object.keys(this.submitted)[0]);
+        console.log(element, value, this.currentForm, Object.keys(this.invalid)[0]);
 
-        var name = Object.keys(this.submitted)[0];
+        var name = Object.keys(this.invalid)[0];
         var $form = $(this.currentForm);
 
         var otherValues = $form
