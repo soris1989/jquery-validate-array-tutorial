@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var $form = $("#my_form");
+    var $btn_add_item = $("#btn_add_item");
 
     // $.validator.addMethod("allRequired", function (value, element, param) {
     //     // Use the name to get all the inputs and verify them
@@ -13,6 +14,26 @@ $(document).ready(function () {
     //             return v;
     //         });
     // });
+
+    $btn_add_item.on("click", function () {
+        var $my_input = $form.find('[name="my_input[]"]');
+        var my_input_count = $my_input.length;
+
+        var $new_wrapper = $("<div>").addClass("mb-3");
+        var $new_label = $("<label>")
+            .attr("for", "my_input_" + (my_input_count + 1))
+            .text("קלט #" + (my_input_count + 1) + ":");
+        var $new_input = $("<input>")
+            .attr("type", "text")
+            .attr("name", "my_input[]")
+            .attr("id", "my_input_" + (my_input_count + 1));
+
+        $new_wrapper.append($new_label).append($new_input);
+
+        console.log($my_input, $my_input.filter(":last"));
+        var $last_input_wrapper = $my_input.filter(":last").closest("div");
+        $last_input_wrapper.after($new_wrapper);
+    });
 
     $.validator.addMethod("noDuplicates", function (value, element, param) {
         console.log(element, value, this.currentForm, Object.keys(this.submitted)[0]);

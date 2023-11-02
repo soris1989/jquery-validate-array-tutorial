@@ -14,24 +14,28 @@
     <body>
         <div id="app">
             <form id="my_form" action="" method="post">
+                <div class="d-flex mb-3">
+                    <h3>טופס ולידציה</h3>
+                    <button id="btn_add_item" type="button" class="mx-2">+ הוסף פריט</button>
+                </div>
                 <div class="mb-3">
                     <label for="my_input_1">קלט #1: </label>
                     <input type="text" name="my_input[]" id="my_input_1" />
                 </div>
                 <div class="mb-3">
-                    <label for="my_input_1">קלט #2: </label>
+                    <label for="my_input_2">קלט #2: </label>
                     <input type="text" name="my_input[]" id="my_input_2" />
                 </div class="mb-3">
                 <div class="mb-3">
-                    <label for="my_input_1">קלט #3: </label>
+                    <label for="my_input_3">קלט #3: </label>
                     <input type="text" name="my_input[]" id="my_input_3" />
                 </div class="mb-3">
                 <div class="mb-3">
-                    <label for="my_input_1">קלט #4: </label>
+                    <label for="my_input_4">קלט #4: </label>
                     <input type="text" name="my_input[]" id="my_input_4" />
                 </div>
                 <div class="mb-3">
-                    <label for="my_input_1">קלט #5: </label>
+                    <label for="my_input_5">קלט #5: </label>
                     <input type="text" name="my_input[]" id="my_input_5" />
                 </div>
                 <button type="submit">צור חדש</button>
