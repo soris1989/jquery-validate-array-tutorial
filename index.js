@@ -30,8 +30,7 @@ $(document).ready(function () {
 
         $new_wrapper.append($new_label).append($new_input);
 
-        console.log($my_input, $my_input.filter(":last"));
-        var $last_input_wrapper = $my_input.filter(":last").closest("div");
+        var $last_input_wrapper = $my_input.last().closest("div");
         $last_input_wrapper.after($new_wrapper);
     });
 
